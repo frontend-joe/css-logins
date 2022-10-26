@@ -22,7 +22,7 @@ body {
   background-image: url("background.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Euclid Circular A";
+  font-family: "Euclid Circular A", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   color: #000;
   animation: rotate 6s infinite alternate linear;
 }
@@ -78,10 +78,21 @@ body {
 }
 
 .login-form > input {
+  transition: all 0.375s;
   border: 2px solid #ebebeb;
   font-family: inherit;
   font-size: 16px;
   padding: 0 16px;
+}
+
+.login-form > input:hover {
+	border-color: #999999;
+}
+
+.login-form > input:focus {
+	outline: none;
+	border-color: #216ce7;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #216ce7;
 }
 
 .login-form > button {
@@ -101,10 +112,29 @@ body {
   transition: all 0.375s;
 }
 
+.login-form > button:hover {
+	background: #1d5dc4;
+}
+
+.login-form > button:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #216ce7;
+}
+
 .login-form > a {
+  transition: all 0.375s;
   color: #216ce7;
   font-size: 1rem;
   text-align: left;
   text-decoration: none;
   margin-bottom: 6px;
+}
+
+.login-form > a:hover {
+	color: #1d5dc4;
+}
+
+.login-form > a:focus {
+	outline: none;
+	box-shadow: 0 0 0 2px #216ce7;
 }
